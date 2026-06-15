@@ -7,6 +7,9 @@ Site de portfólio pessoal desenvolvido em HTML, CSS e JavaScript.
 - PM Nordeste RP: https://pm-nrp.netlify.app
 - COTAM RP: https://cotamnrp.netlify.app
 - AIOTI Soluções Industriais: https://aiotisolucoes.com.br
+- Barbearia Marcelo : https://barbeiro-marcelo.netlify.app
+
+
 
 
 
