@@ -1,16 +1,19 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
   });
-});
 
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
 // ===== Animações ao rolar a página =====
 const revealElements = document.querySelectorAll(".reveal, .reveal-item");
@@ -22,9 +25,7 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, {
-  threshold: 0.12
-});
+}, { threshold: 0.12 });
 
 revealElements.forEach((element) => {
   revealObserver.observe(element);
@@ -58,9 +59,7 @@ const counterObserver = new IntersectionObserver((entries) => {
     updateCounter();
     counterObserver.unobserve(counter);
   });
-}, {
-  threshold: 0.8
-});
+}, { threshold: 0.8 });
 
 counters.forEach((counter) => {
   counterObserver.observe(counter);

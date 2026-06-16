@@ -4,17 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VR Web Design | Portfólio</title>
+  <meta name="description" content="Portfólio da VR Web Design - Criação de sites modernos, leves, responsivos e profissionais." />
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Portfólio da VR Web Design - Criação de sites modernos, institucionais e landing pages." />
 </head>
 <body>
   <header class="header">
     <nav class="navbar">
-      <a href="#" class="logo">VR Web Design<span>.</span></a>
+      <a href="#inicio" class="logo" aria-label="Voltar ao início">VR Web Design<span>.</span></a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
-        ☰
-      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#inicio">Início</a></li>
@@ -30,28 +28,28 @@
     <section class="hero reveal" id="inicio">
       <div class="hero-content">
         <p class="tag">Desenvolvimento Web & Design</p>
-        <h1>Vinícius Rodrigues</h1>
-        <h2>Crio sites modernos para empresas, projetos e marcas.</h2>
+        <h1>Sites leves, modernos e com presença profissional.</h1>
         <p class="hero-text">
-          Desenvolvimento de sites institucionais, landing pages e portfólios com foco em identidade visual,
-          apresentação profissional e boa experiência para o usuário.
+          Criação de sites institucionais, landing pages e portfólios para empresas, projetos e profissionais que querem se apresentar melhor na internet.
         </p>
 
         <div class="hero-buttons">
           <a href="#projetos" class="btn primary">Ver projetos</a>
           <a href="#contato" class="btn secondary">Entrar em contato</a>
-        
-        <div class="hero-stats">
-          <div><strong data-count="3">0</strong><span>Projetos publicados</span></div>
+        </div>
+
+        <div class="hero-stats" aria-label="Resumo do portfólio">
+          <div><strong data-count="4">0</strong><span>Projetos publicados</span></div>
           <div><strong data-count="100">0</strong><span>Responsivo</span></div>
           <div><strong data-count="5">0</strong><span>Tecnologias</span></div>
         </div>
       </div>
 
-      <div class="hero-card float-card">
+      <div class="hero-card float-card" aria-label="Resumo VR Web Design">
         <div class="profile-circle">VR</div>
-        <h3>Sites profissionais</h3>
-        <p>Design moderno, responsivo e pronto para publicação.</p>
+        <p class="card-kicker">VR Web Design</p>
+        <h2>Design limpo, rápido e funcional.</h2>
+        
       </div>
     </section>
 
@@ -62,20 +60,16 @@
       </div>
 
       <div class="about-grid">
-        <div>
+        <div class="about-text">
           <p>
-            Meu nome é Vinícius Rodrigues. Sou estudante de Engenharia, tenho experiência em desenvolver
-            sites modernos utilizando HTML, CSS e JavaScript. Possuo conhecimento em Git e GitHub para
-            controle de versão e publicação de projetos. Tal como conhecimento em caminhos para uma
-            hospedagem segura do seus sites.
+            Meu nome é Vinícius Rodrigues. Sou estudante de Engenharia e desenvolvo sites utilizando HTML, CSS e JavaScript, com atenção ao visual, organização, responsividade e publicação dos projetos.
           </p>
           <p>
-            Meu foco é criar páginas bonitas, organizadas e funcionais para empresas, projetos, organizações
-            e profissionais que desejam se apresentar melhor na internet.
+            Meu foco é criar páginas bonitas, leves e funcionais para empresas, projetos, organizações e profissionais que desejam transmitir mais confiança na internet.
           </p>
         </div>
 
-        <div class="skills-box">
+        <div class="skills-box reveal-item">
           <h3>Tecnologias</h3>
           <div class="skills">
             <span>HTML</span>
@@ -96,92 +90,71 @@
       </div>
 
       <div class="projects-grid">
-  
-      <article class="project-card reveal-item">
-          <a href="https://barbeiro-marcelo.netlify.app" target="_blank" class="project-image-link" aria-label="Acessar Barbearia Marcelo">
-            <img src="assets/imagens/barbearia.jpeg.jpeg" alt="Screenshot do site PM Nordeste RP" class="project-image">
-          </a>
-          <div class="project-info">
-            <span>Portal Institucional</span>
-            <h3>Barbearia Marcelo</h3>
-            <p>
-              Site empresarial para serviços de beleza.
-            </p>
-            <ul>
-              <li>Layout moderno com identidade visual forte.</li>
-              <li>Estrutura institucional com múltiplas seções.</li>
-              <li>Publicado e hospedado no Netlify.</li>
-            </ul>
-            <div class="project-actions">
-              <a href="https://barbeiro-marcelo.netlify.app" target="_blank" class="btn primary small">Ver site</a>
-            </div>
-          </div>
-        </article>
-  
-      <div class="projects-grid">
         <article class="project-card reveal-item">
-          <a href="https://pm-nrp.netlify.app" target="_blank" class="project-image-link" aria-label="Acessar PM Nordeste RP">
-            <img src="assets/imagens/pm-nordeste-rp.png" alt="Screenshot do site PM Nordeste RP" class="project-image">
+          <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar Barbearia Marcelo">
+            <img src="assets/imagens/barbearia.jpeg.jpeg" alt="Screenshot do site Barbearia Marcelo" class="project-image" />
           </a>
           <div class="project-info">
-            <span>Portal Institucional</span>
-            <h3>PM Nordeste RP</h3>
-            <p>
-              Portal desenvolvido para apresentação da corporação, unidades especializadas, hierarquia,
-              recrutamento e galeria.
-            </p>
+            <span>Site Empresarial</span>
+            <h3>Barbearia Marcelo</h3>
+            <p>Site empresarial para apresentação de serviços de beleza, localização, contato e agendamento.</p>
             <ul>
               <li>Layout moderno com identidade visual forte.</li>
               <li>Estrutura institucional com múltiplas seções.</li>
               <li>Publicado e hospedado no Netlify.</li>
             </ul>
-            <div class="project-actions">
-              <a href="https://pm-nrp.netlify.app" target="_blank" class="btn primary small">Ver site</a>
-            </div>
+            <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
           </div>
         </article>
 
         <article class="project-card reveal-item">
-          <a href="https://cotamnrp.netlify.app" target="_blank" class="project-image-link" aria-label="Acessar COTAM RP">
-            <img src="assets/imagens/cotam-rp.png" alt="Screenshot do site COTAM RP" class="project-image">
+          <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar PM Nordeste RP">
+            <img src="assets/imagens/pm-nordeste-rp.png" alt="Screenshot do site PM Nordeste RP" class="project-image" />
+          </a>
+          <div class="project-info">
+            <span>Portal Institucional</span>
+            <h3>PM Nordeste RP</h3>
+            <p>Portal desenvolvido para apresentação da corporação, unidades especializadas, hierarquia, recrutamento e galeria.</p>
+            <ul>
+              <li>Layout moderno com identidade visual forte.</li>
+              <li>Estrutura institucional com múltiplas seções.</li>
+              <li>Publicado e hospedado no Netlify.</li>
+            </ul>
+            <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal-item">
+          <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar COTAM RP">
+            <img src="assets/imagens/cotam-rp.png" alt="Screenshot do site COTAM RP" class="project-image" />
           </a>
           <div class="project-info">
             <span>Site Institucional</span>
             <h3>COTAM RP</h3>
-            <p>
-              Projeto visual para unidade tática especializada, focado em identidade visual,
-              organização e experiência moderna.
-            </p>
+            <p>Projeto visual para unidade tática especializada, focado em identidade visual, organização e experiência moderna.</p>
             <ul>
               <li>Design tático com alto impacto visual.</li>
               <li>Seções para divisões, hierarquia, requisitos e galeria.</li>
               <li>Site responsivo e publicado no Netlify.</li>
             </ul>
-            <div class="project-actions">
-              <a href="https://cotamnrp.netlify.app" target="_blank" class="btn primary small">Ver site</a>
-            </div>
+            <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
           </div>
         </article>
 
         <article class="project-card reveal-item">
-          <a href="https://aiotisolucoes.com.br" target="_blank" class="project-image-link" aria-label="Acessar AIOTI Soluções Industriais">
-            <img src="assets/imagens/aioti.png" alt="Screenshot do site AIOTI Soluções Industriais" class="project-image">
+          <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar AIOTI Soluções Industriais">
+            <img src="assets/imagens/aioti.png" alt="Screenshot do site AIOTI Soluções Industriais" class="project-image" />
           </a>
           <div class="project-info">
             <span>Site Empresarial</span>
             <h3>AIOTI Soluções Industriais</h3>
-            <p>
-              Site corporativo voltado para automação industrial, monitoramento IoT, coleta de dados
-              e soluções para indústria.
-            </p>
+            <p>Site corporativo voltado para automação industrial, monitoramento IoT, coleta de dados e soluções para indústria.</p>
             <ul>
               <li>Visual claro, tecnológico e profissional.</li>
               <li>Apresentação de serviços, projetos e soluções industriais.</li>
               <li>Publicado com domínio próprio.</li>
             </ul>
-            <div class="project-actions">
-              <a href="https://aiotisolucoes.com.br" target="_blank" class="btn primary small">Ver site</a>
-            </div>
+            <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
           </div>
         </article>
       </div>
@@ -195,21 +168,22 @@
 
       <div class="services-grid">
         <div class="service-card reveal-item">
+          <span>01</span>
           <h3>Landing Pages</h3>
           <p>Páginas objetivas para apresentar produtos, serviços, eventos ou campanhas.</p>
         </div>
-
         <div class="service-card reveal-item">
+          <span>02</span>
           <h3>Sites Institucionais</h3>
           <p>Sites completos para empresas, negócios, organizações e projetos.</p>
         </div>
-
         <div class="service-card reveal-item">
+          <span>03</span>
           <h3>Portfólios</h3>
           <p>Sites pessoais para profissionais mostrarem trabalhos, serviços e contato.</p>
         </div>
-
         <div class="service-card reveal-item">
+          <span>04</span>
           <h3>Manutenção</h3>
           <p>Ajustes visuais, atualização de informações, melhorias e novas seções.</p>
         </div>
@@ -217,9 +191,10 @@
     </section>
 
     <section class="cta reveal">
+      <p>Vamos criar algo juntos?</p>
       <h2>Quer tirar uma ideia do papel?</h2>
-      <p>Me chama e vamos transformar seu projeto em um site moderno e profissional.</p>
-      <a href="https://wa.me/5585999100100" class="btn primary" target="_blank">Falar no WhatsApp</a>
+      <span>Me chama e vamos transformar seu projeto em um site moderno e profissional.</span>
+      <a href="https://wa.me/5585999100100" class="btn primary" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </section>
 
     <section class="section contact reveal" id="contato">
@@ -230,9 +205,9 @@
 
       <div class="contact-box">
         <a href="mailto:vrsponte@gmail.com">vrsponte@gmail.com</a>
-        <a href="https://github.com/Viniciusaioti06" target="_blank">GitHub</a>
-        <a href="https://instagram.com/seuinstagram" target="_blank">Instagram</a>
-        <a href="https://wa.me/5585999100100" target="_blank">WhatsApp</a>
+        <a href="https://github.com/Viniciusaioti06" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://instagram.com/seuinstagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5585999100100" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </section>
   </main>
@@ -241,7 +216,8 @@
     <p>© 2026 Vinicius Rodrigues. Todos os direitos reservados.</p>
   </footer>
 
+  <a href="https://wa.me/5585999100100" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">✆</a>
+
   <script src="js/script.js"></script>
-  <a href="https://wa.me/5585999100100" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">✆</a>
 </body>
 </html>
