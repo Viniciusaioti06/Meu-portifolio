@@ -75,13 +75,14 @@ img {
 }
 
 .logo {
-  font-size: 1.12rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
 }
 
-.logo span {
-  color: var(--accent);
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -301,16 +302,21 @@ img {
 .profile-circle {
   width: 132px;
   height: 132px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 32px;
-  color: #ffffff;
-  background: var(--dark);
-  font-size: 2.7rem;
-  font-weight: 900;
-  letter-spacing: -0.08em;
+  overflow: hidden;
   margin-bottom: auto;
+  background: var(--dark);
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.18);
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-card h2 {
@@ -681,6 +687,10 @@ footer {
   .section,
   .cta {
     width: min(100% - 32px, 1160px);
+  }
+
+  .logo img {
+    height: 38px;
   }
 
   .hero h1,
