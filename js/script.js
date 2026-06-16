@@ -1,3 +1,4 @@
+/* ===== MENU MOBILE ===== */
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -7,60 +8,115 @@ if (menuBtn && navLinks) {
     menuBtn.setAttribute("aria-expanded", String(isOpen));
   });
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  // Fecha ao clicar em um link
+  navLinks.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
       menuBtn.setAttribute("aria-expanded", "false");
     });
   });
-}
 
-// ===== Animações ao rolar a página =====
-const revealElements = document.querySelectorAll(".reveal, .reveal-item");
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      revealObserver.unobserve(entry.target);
+  // Fecha ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (!menuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("active");
+      menuBtn.setAttribute("aria-expanded", "false");
     }
   });
-}, { threshold: 0.12 });
+}
 
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
-});
+/* ===== HEADER: sombra ao rolar ===== */
+const header = document.getElementById("site-header");
 
-// ===== Contadores animados =====
+if (header) {
+  const onScroll = () => {
+    header.classList.toggle("scrolled", window.scrollY > 12);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+/* ===== ACTIVE NAV LINK (highlight da seção visível) ===== */
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll(".nav-link");
+
+if (sections.length && navItems.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((link) => {
+            const href = link.getAttribute("href");
+            link.classList.toggle(
+              "active",
+              href === `#${entry.target.id}`
+            );
+          });
+        }
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+
+  sections.forEach((sec) => sectionObserver.observe(sec));
+}
+
+/* ===== REVEAL AO ROLAR ===== */
+const revealEls = document.querySelectorAll(".reveal, .reveal-item, .reveal-delay");
+
+if (revealEls.length) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.10 }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+}
+
+/* ===== CONTADORES ANIMADOS ===== */
 const counters = document.querySelectorAll("[data-count]");
 
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
+if (counters.length) {
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-    const counter = entry.target;
-    const target = Number(counter.dataset.count);
-    const suffix = target === 100 ? "%" : "+";
-    let current = 0;
-    const increment = Math.max(1, Math.ceil(target / 42));
+        const el = entry.target;
+        const target = Number(el.dataset.count);
+        const isPercent = target === 100;
+        const suffix = isPercent ? "%" : "+";
+        const duration = 900; // ms
+        const startTime = performance.now();
 
-    const updateCounter = () => {
-      current += increment;
+        const tick = (now) => {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // ease-out quart
+          const eased = 1 - Math.pow(1 - progress, 4);
+          const current = Math.round(eased * target);
 
-      if (current >= target) {
-        counter.textContent = `${target}${suffix}`;
-        return;
-      }
+          el.textContent = `${current}${suffix}`;
 
-      counter.textContent = `${current}${suffix}`;
-      requestAnimationFrame(updateCounter);
-    };
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = `${target}${suffix}`;
+          }
+        };
 
-    updateCounter();
-    counterObserver.unobserve(counter);
-  });
-}, { threshold: 0.8 });
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    },
+    { threshold: 0.8 }
+  );
 
-counters.forEach((counter) => {
-  counterObserver.observe(counter);
-});
+  counters.forEach((counter) => counterObserver.observe(counter));
+}

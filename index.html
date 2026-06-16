@@ -4,223 +4,329 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VR Web Design | Portfólio</title>
-  <meta name="description" content="Portfólio da VR Web Design - Criação de sites modernos, leves, responsivos e profissionais." />
+  <meta name="description" content="Portfólio da VR Web Design - Criação de sites modernos, leves, responsivos e profissionais para empresas e profissionais em Fortaleza." />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='16' fill='white'>VR</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <a href="#inicio" class="logo" aria-label="Voltar ao início">
-        <img src="assets/imagens/logo-navbar.png" alt="VR Web Design">
+
+  <!-- NAV -->
+  <header class="header" id="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#inicio" class="logo" aria-label="VR Web Design — Voltar ao início">
+        <img src="assets/imagens/logo-navbar.png" alt="VR Web Design" width="120" height="44" />
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero reveal" id="inicio">
-      <div class="hero-content">
-        <p class="tag">Desenvolvimento Web & Design</p>
-        <h1>Sites leves, modernos e com presença profissional.</h1>
-        <p class="hero-text">
-          Criação de sites institucionais, landing pages e portfólios para empresas, projetos e profissionais que querem se apresentar melhor na internet.
-        </p>
 
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-heading">
+      <div class="hero-content reveal">
+        <p class="tag" aria-hidden="true">
+          <span class="tag-dot"></span>
+          Desenvolvimento Web &amp; Design
+        </p>
+        <h1 id="hero-heading">Sites leves, modernos<br>e com presença<br>profissional.</h1>
+        <p class="hero-text">
+          Criação de sites institucionais, landing pages e portfólios para empresas e profissionais que querem se apresentar melhor na internet.
+        </p>
         <div class="hero-buttons">
           <a href="#projetos" class="btn primary">Ver projetos</a>
           <a href="#contato" class="btn secondary">Entrar em contato</a>
         </div>
-
         <div class="hero-stats" aria-label="Resumo do portfólio">
-          <div><strong data-count="4">0</strong><span>Projetos publicados</span></div>
-          <div><strong data-count="100">0</strong><span>Responsivo</span></div>
-          <div><strong data-count="5">0</strong><span>Tecnologias</span></div>
+          <div class="stat-item">
+            <strong data-count="4" aria-label="4 projetos publicados">0</strong>
+            <span>Projetos publicados</span>
+          </div>
+          <div class="stat-item">
+            <strong data-count="100" aria-label="100% responsivo">0</strong>
+            <span>Mobile-first</span>
+          </div>
+          <div class="stat-item">
+            <strong data-count="6" aria-label="6 tecnologias">0</strong>
+            <span>Tecnologias</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-card float-card" aria-label="Resumo VR Web Design">
+      <div class="hero-card float-card reveal-delay" aria-label="Apresentação VR Web Design">
         <div class="profile-circle">
-          <img src="assets/imagens/logo-quadrada.png" alt="VR Web Design">
+          <img src="assets/imagens/logo-quadrada.png" alt="Logo VR Web Design" width="132" height="132" />
         </div>
         <p class="card-kicker">VR Web Design</p>
-        <h2>Design limpo, rápido e funcional.</h2>
-        
+        <h2>Design limpo,<br>rápido e funcional.</h2>
+        <div class="card-tags" aria-label="Especialidades">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
       </div>
     </section>
 
-    <section class="section about reveal" id="sobre">
-      <div class="section-title">
-        <p>Sobre mim</p>
-        <h2>Transformando ideias em presença digital.</h2>
+    <!-- SOBRE -->
+    <section class="section about" id="sobre" aria-labelledby="sobre-heading">
+      <div class="section-title reveal">
+        <p class="section-eyebrow">Sobre mim</p>
+        <h2 id="sobre-heading">Transformando ideias<br>em presença digital.</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text reveal">
           <p>
-            Meu nome é Vinícius Rodrigues. Sou estudante de Engenharia e desenvolvo sites utilizando HTML, CSS e JavaScript, com atenção ao visual, organização, responsividade e publicação dos projetos.
+            Meu nome é <strong>Vinícius Rodrigues</strong>. Sou estudante de Engenharia e desenvolvo sites com HTML, CSS e JavaScript — com atenção ao visual, organização, responsividade e publicação dos projetos.
           </p>
           <p>
-            Meu foco é criar páginas bonitas, leves e funcionais para empresas, projetos, organizações e profissionais que desejam transmitir mais confiança na internet.
+            Meu foco é criar páginas bonitas, leves e funcionais para empresas, projetos e profissionais que desejam transmitir mais confiança na internet.
           </p>
+          <a href="#projetos" class="btn secondary inline-btn">Ver meus projetos</a>
         </div>
 
-        <div class="skills-box reveal-item">
+        <div class="skills-box reveal-item" aria-label="Tecnologias utilizadas">
           <h3>Tecnologias</h3>
-          <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>GitHub</span>
-            <span>Netlify</span>
-            <span>Design Responsivo</span>
-          </div>
+          <ul class="skills" role="list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub</li>
+            <li>Netlify</li>
+            <li>Design Responsivo</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section projects reveal" id="projetos">
-      <div class="section-title center">
-        <p>Projetos</p>
-        <h2>Sites desenvolvidos e publicados</h2>
+    <!-- PROJETOS -->
+    <section class="section projects" id="projetos" aria-labelledby="projetos-heading">
+      <div class="section-title center reveal">
+        <p class="section-eyebrow">Projetos</p>
+        <h2 id="projetos-heading">Sites desenvolvidos e publicados</h2>
       </div>
 
       <div class="projects-grid">
-        <article class="project-card reveal-item">
-          <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar Barbearia Marcelo">
-            <img src="assets/imagens/barbearia.jpeg.jpeg" alt="Screenshot do site Barbearia Marcelo" class="project-image" />
+
+        <article class="project-card reveal-item" aria-label="Projeto: Barbearia Marcelo">
+          <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-image-link" tabindex="-1" aria-hidden="true">
+            <img src="assets/imagens/barbearia.jpeg.jpeg" alt="" class="project-image" loading="lazy" width="540" height="360" />
           </a>
           <div class="project-info">
-            <span>Site Empresarial</span>
+            <span class="project-tag">Site Empresarial</span>
             <h3>Barbearia Marcelo</h3>
-            <p>Site empresarial para apresentação de serviços de beleza, localização, contato e agendamento.</p>
-            <ul>
-              <li>Layout moderno com identidade visual forte.</li>
-              <li>Estrutura institucional com múltiplas seções.</li>
-              <li>Publicado e hospedado no Netlify.</li>
+            <p>Site para apresentação de serviços, galeria, localização e agendamento de uma barbearia em Fortaleza.</p>
+            <ul class="project-list">
+              <li>Integração com agendamento online via Fresha</li>
+              <li>Identidade visual forte e coerente com o negócio</li>
+              <li>Seções de preços, galeria e horários de funcionamento</li>
             </ul>
-            <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
+            <a href="https://barbeiro-marcelo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn primary small">
+              Ver site
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
           </div>
         </article>
 
-        <article class="project-card reveal-item">
-          <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar PM Nordeste RP">
-            <img src="assets/imagens/pm-nordeste-rp.png" alt="Screenshot do site PM Nordeste RP" class="project-image" />
+        <article class="project-card reveal-item" aria-label="Projeto: AIOTI Soluções Industriais">
+          <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener noreferrer" class="project-image-link" tabindex="-1" aria-hidden="true">
+            <img src="assets/imagens/aioti.png" alt="" class="project-image" loading="lazy" width="540" height="360" />
           </a>
           <div class="project-info">
-            <span>Portal Institucional</span>
-            <h3>PM Nordeste RP</h3>
-            <p>Portal desenvolvido para apresentação da corporação, unidades especializadas, hierarquia, recrutamento e galeria.</p>
-            <ul>
-              <li>Layout moderno com identidade visual forte.</li>
-              <li>Estrutura institucional com múltiplas seções.</li>
-              <li>Publicado e hospedado no Netlify.</li>
-            </ul>
-            <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal-item">
-          <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar COTAM RP">
-            <img src="assets/imagens/cotam-rp.png" alt="Screenshot do site COTAM RP" class="project-image" />
-          </a>
-          <div class="project-info">
-            <span>Site Institucional</span>
-            <h3>COTAM RP</h3>
-            <p>Projeto visual para unidade tática especializada, focado em identidade visual, organização e experiência moderna.</p>
-            <ul>
-              <li>Design tático com alto impacto visual.</li>
-              <li>Seções para divisões, hierarquia, requisitos e galeria.</li>
-              <li>Site responsivo e publicado no Netlify.</li>
-            </ul>
-            <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal-item">
-          <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener" class="project-image-link" aria-label="Acessar AIOTI Soluções Industriais">
-            <img src="assets/imagens/aioti.png" alt="Screenshot do site AIOTI Soluções Industriais" class="project-image" />
-          </a>
-          <div class="project-info">
-            <span>Site Empresarial</span>
+            <span class="project-tag">Site Corporativo</span>
             <h3>AIOTI Soluções Industriais</h3>
-            <p>Site corporativo voltado para automação industrial, monitoramento IoT, coleta de dados e soluções para indústria.</p>
-            <ul>
-              <li>Visual claro, tecnológico e profissional.</li>
-              <li>Apresentação de serviços, projetos e soluções industriais.</li>
-              <li>Publicado com domínio próprio.</li>
+            <p>Site corporativo para empresa de automação industrial, IoT, monitoramento em nuvem e retrofit em Fortaleza.</p>
+            <ul class="project-list">
+              <li>Visual tecnológico com domínio próprio</li>
+              <li>Apresentação completa de serviços, projetos e FAQ</li>
+              <li>Seção exclusiva de monitoramento solar</li>
             </ul>
-            <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener" class="btn primary small">Ver site</a>
+            <a href="https://aiotisolucoes.com.br" target="_blank" rel="noopener noreferrer" class="btn primary small">
+              Ver site
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
           </div>
         </article>
+
+        <article class="project-card reveal-item" aria-label="Projeto: PM Nordeste RP">
+          <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener noreferrer" class="project-image-link" tabindex="-1" aria-hidden="true">
+            <img src="assets/imagens/pm-nordeste-rp.png" alt="" class="project-image" loading="lazy" width="540" height="360" />
+          </a>
+          <div class="project-info">
+            <span class="project-tag">Portal Institucional</span>
+            <h3>PM Nordeste RP</h3>
+            <p>Portal para corporação policial em servidor GTA RP, com hierarquia, unidades, recrutamento e galeria operacional.</p>
+            <ul class="project-list">
+              <li>5 sub-portais de unidades especializadas</li>
+              <li>Sistema visual de progressão de patentes</li>
+              <li>Identidade visual de alto impacto tático</li>
+            </ul>
+            <a href="https://pm-nrp.netlify.app" target="_blank" rel="noopener noreferrer" class="btn primary small">
+              Ver site
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal-item" aria-label="Projeto: COTAM RP">
+          <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener noreferrer" class="project-image-link" tabindex="-1" aria-hidden="true">
+            <img src="assets/imagens/cotam-rp.png" alt="" class="project-image" loading="lazy" width="540" height="360" />
+          </a>
+          <div class="project-info">
+            <span class="project-tag">Site Institucional</span>
+            <h3>COTAM RP</h3>
+            <p>Portal para unidade tática especializada de GTA RP, com divisões, hierarquia, cursos e galeria operacional.</p>
+            <ul class="project-list">
+              <li>3 divisões: CHOQUE, GTM e GRAER</li>
+              <li>Design tático com alto contraste e impacto visual</li>
+              <li>Sistema de requisitos e progressão por mérito</li>
+            </ul>
+            <a href="https://cotamnrp.netlify.app" target="_blank" rel="noopener noreferrer" class="btn primary small">
+              Ver site
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section class="section services reveal" id="servicos">
-      <div class="section-title center">
-        <p>Serviços</p>
-        <h2>O que posso desenvolver</h2>
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos" aria-labelledby="servicos-heading">
+      <div class="section-title center reveal">
+        <p class="section-eyebrow">Serviços</p>
+        <h2 id="servicos-heading">O que posso desenvolver</h2>
       </div>
 
       <div class="services-grid">
         <div class="service-card reveal-item">
-          <span>01</span>
+          <div class="service-number" aria-hidden="true">01</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 0h.008v.008H9.75V6zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+          </div>
           <h3>Landing Pages</h3>
-          <p>Páginas objetivas para apresentar produtos, serviços, eventos ou campanhas.</p>
+          <p>Páginas objetivas e persuasivas para apresentar produtos, serviços, eventos ou campanhas.</p>
         </div>
         <div class="service-card reveal-item">
-          <span>02</span>
+          <div class="service-number" aria-hidden="true">02</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/></svg>
+          </div>
           <h3>Sites Institucionais</h3>
-          <p>Sites completos para empresas, negócios, organizações e projetos.</p>
+          <p>Sites completos para empresas, negócios, organizações e projetos que precisam de presença sólida.</p>
         </div>
         <div class="service-card reveal-item">
-          <span>03</span>
+          <div class="service-number" aria-hidden="true">03</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
           <h3>Portfólios</h3>
-          <p>Sites pessoais para profissionais mostrarem trabalhos, serviços e contato.</p>
+          <p>Sites pessoais para profissionais mostrarem trabalhos, habilidades e formas de contato.</p>
         </div>
         <div class="service-card reveal-item">
-          <span>04</span>
+          <div class="service-number" aria-hidden="true">04</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+          </div>
           <h3>Manutenção</h3>
-          <p>Ajustes visuais, atualização de informações, melhorias e novas seções.</p>
+          <p>Ajustes visuais, atualização de conteúdo, melhorias de performance e novas seções.</p>
         </div>
       </div>
     </section>
 
-    <section class="cta reveal">
-      <p>Vamos criar algo juntos?</p>
-      <h2>Quer tirar uma ideia do papel?</h2>
-      <span>Me chama e vamos transformar seu projeto em um site moderno e profissional.</span>
-      <a href="https://wa.me/5585999100100" class="btn primary" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <!-- CTA -->
+    <section class="cta reveal" aria-labelledby="cta-heading">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <p class="section-eyebrow cta-eyebrow">Vamos criar algo juntos?</p>
+      <h2 id="cta-heading">Quer tirar uma ideia do papel?</h2>
+      <p class="cta-sub">Me chama e vamos transformar seu projeto em um site moderno e profissional.</p>
+      <a href="https://wa.me/5585999100100" class="btn primary" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.177a.75.75 0 00.919.919l5.344-1.47A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.895 0-3.668-.524-5.178-1.434l-.36-.214-3.742 1.03 1.043-3.631-.235-.374A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar no WhatsApp
+      </a>
     </section>
 
-    <section class="section contact reveal" id="contato">
-      <div class="section-title center">
-        <p>Contato</p>
-        <h2>Vamos conversar?</h2>
+    <!-- CONTATO -->
+    <section class="section contact" id="contato" aria-labelledby="contato-heading">
+      <div class="section-title center reveal">
+        <p class="section-eyebrow">Contato</p>
+        <h2 id="contato-heading">Vamos conversar?</h2>
       </div>
 
-      <div class="contact-box">
-        <a href="mailto:vrwebdesign50@gmail.com">vrwebdesign50@gmail.com</a>
-        <a href="https://github.com/Viniciusaioti06" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://instagram.com/seuinstagram" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/5585999100100" target="_blank" rel="noopener">WhatsApp</a>
+      <div class="contact-grid reveal">
+        <a href="mailto:vrwebdesign50@gmail.com" class="contact-card" aria-label="Enviar e-mail para vrwebdesign50@gmail.com">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-label">E-mail</span>
+            <strong>vrwebdesign50@gmail.com</strong>
+          </div>
+          <svg class="contact-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+
+        <a href="https://github.com/Viniciusaioti06" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Acessar perfil no GitHub">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-label">GitHub</span>
+            <strong>Viniciusaioti06</strong>
+          </div>
+          <svg class="contact-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+
+        <a href="https://www.instagram.com/vr_web_design" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Acessar perfil no Instagram">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-label">Instagram</span>
+            <strong>@vr_web_design</strong>
+          </div>
+          <svg class="contact-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+
+        <a href="https://wa.me/5585999100100" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--highlight" aria-label="Falar no WhatsApp">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.177a.75.75 0 00.919.919l5.344-1.47A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.895 0-3.668-.524-5.178-1.434l-.36-.214-3.742 1.03 1.043-3.631-.235-.374A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-label">WhatsApp</span>
+            <strong>(85) 99910-0100</strong>
+          </div>
+          <svg class="contact-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 Vinicius Rodrigues. Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p>© 2026 Vinicius Rodrigues · VR Web Design · Fortaleza, CE</p>
   </footer>
 
-  <a href="https://wa.me/5585999100100" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">✆</a>
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5585999100100" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.177a.75.75 0 00.919.919l5.344-1.47A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.895 0-3.668-.524-5.178-1.434l-.36-.214-3.742 1.03 1.043-3.631-.235-.374A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
 
   <script src="js/script.js"></script>
 </body>
